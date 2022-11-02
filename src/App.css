@@ -36,3 +36,25 @@ body{
 a{
   color: aquamarine;
 }
+
+.main_container{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.advocate_list{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+}
+
+.advocate_preview_wrapper{
+  width: 300px;
+}
+
+.advocate_preview_image{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid aquamarine;
+}
