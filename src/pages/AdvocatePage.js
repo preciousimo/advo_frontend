@@ -1,9 +1,16 @@
-import React from 'react'
+import React from "react";
+import { useParams } from "react-router-dom";
 
 const AdvocatePage = () => {
-  return (
-    <div>Advocate Page</div>
-  )
-}
+  const params = useParams();
+  const username = params.username;
 
-export default AdvocatePage
+
+  return (
+    <div>
+        <h1>Advocate Page {username} </h1>
+    </div>
+  )
+};
+
+export default AdvocatePage;
