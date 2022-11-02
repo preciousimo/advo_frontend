@@ -35,7 +35,7 @@ const HomePage = () => {
               <div>
                 <strong>{advocate.name}</strong>
                 <br />
-                <a href={advocate.twitter}>@{advocate.username}</a>
+                <a href={advocate.twitter} target="_blank">@{advocate.username}</a>
               </div>
             </div>
 
