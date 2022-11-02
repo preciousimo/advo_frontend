@@ -13,13 +13,13 @@ a{
 }
 
 .advocate_list{
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 2em;
 }
 
 .advocate_preview_wrapper{
-  width: 300px;
+
 }
 
 .advocate_preview_image{
