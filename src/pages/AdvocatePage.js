@@ -1,7 +1,9 @@
 import React from 'react'
 
-export const AdvocatePage = () => {
+const AdvocatePage = () => {
   return (
     <div>Advocate Page</div>
   )
 }
+
+export default AdvocatePage
