@@ -8,7 +8,7 @@ const AdvocatePage = () => {
 
   return (
     <div>
-        <h1>Advocate Page {username} </h1>
+        <h1> {username} </h1>
     </div>
   )
 };

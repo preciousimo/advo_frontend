@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from 'react-router-dom'
 import axios from "axios";
 
 const HomePage = () => {
@@ -22,6 +23,7 @@ const HomePage = () => {
             {advocates.map((advocate, index) => (
                 <div key={index}>
                     <strong>{advocate.username}</strong>
+                    <Link to={`/advocate/${advocate.username}`}>View</Link>
                 </div>
             ))}
         </div>
