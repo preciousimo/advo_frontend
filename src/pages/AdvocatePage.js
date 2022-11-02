@@ -14,18 +14,21 @@ const AdvocatePage = () => {
 
   let getData = async () => {
     let response = await axios.get(
-      `http://127.0.0.1:8000/advocates/${username}`
+      `https://cados.up.railway.app/advocates/${username}`
     );
     console.log("Response:", response);
-    setAdvocate(response.data);
+    setAdvocate(response.data.advocate);
   };
 
   return (
     <>
       {advocate && (
-        <div>
-          <h1> {advocate.username} </h1>
-          <p> {advocate.bio} </p>
+        <div className="advocate_preview_wrapper">
+          <img className="advocate_preview_image" src={advocate.profile_pic} />
+          <strong>{advocate.name}</strong>
+          <br />
+          <a href={advocate.twitter}>@{advocate.username}</a>
+          <p>{advocate.bio}</p>
         </div>
       )}
     </>
