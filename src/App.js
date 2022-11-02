@@ -1,3 +1,5 @@
+import HomePage from './pages/HomePage'
+import AdvocatePage from './pages/AdvocatePage'
 import './App.css';
 
 function App() {
