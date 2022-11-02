@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 import axios from "axios";
 
 const HomePage = () => {
@@ -10,25 +10,25 @@ const HomePage = () => {
   }, []);
 
   let getData = async () => {
-    let response = await axios.get("http://127.0.0.1:8000/advocates/");
+    let response = await axios.get("https://cados.up.railway.app/advocates/");
     console.log("Response:", response);
-    setAdvocates(response.data)
+    setAdvocates(response.data.advocates);
   };
 
   return (
     <div>
-        <h1>Home Page</h1>
+      <h1>Home Page</h1>
 
-        <div>
-            {advocates.map((advocate, index) => (
-                <div key={index}>
-                    <strong>{advocate.username}</strong>
-                    <Link to={`/advocate/${advocate.username}`}>View</Link>
-                </div>
-            ))}
-        </div>
+      <div>
+        {advocates.map((advocate, index) => (
+          <div key={index}>
+            <strong>{advocate.username}</strong>
+            <Link to={`/advocate/${advocate.username}`}>View</Link>
+          </div>
+        ))}
+      </div>
     </div>
-  )
+  );
 };
 
 export default HomePage;
