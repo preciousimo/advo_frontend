@@ -15,11 +15,17 @@ a{
 .advocate_list{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 2em;
+  gap: 4em;
 }
 
 .advocate_preview_wrapper{
 
+}
+
+.advocate_preview_header{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
 }
 
 .advocate_preview_image{
@@ -27,4 +33,9 @@ a{
   height: 50px;
   border-radius: 50%;
   border: 2px solid aquamarine;
+}
+
+.bio_preview{
+  display: block;
+  margin: 1em 0;
 }

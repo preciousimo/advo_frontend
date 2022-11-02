@@ -25,16 +25,21 @@ const HomePage = () => {
       <div className="advocate_list">
         {advocates.map((advocate, index) => (
           <div className="advocate_preview_wrapper" key={index}>
-            <Link to={`/advocate/${advocate.username}`}>
-            <img
-              className="advocate_preview_image"
-              src={advocate.profile_pic}
-            />
-            </Link>
-            <strong>{advocate.name}</strong>
-            <br/>
-            <a href={advocate.twitter}>@{advocate.username}</a>
-            <p>{advocate.bio}</p>
+            <div className="advocate_preview_header">
+              <Link to={`/advocate/${advocate.username}`}>
+                <img
+                  className="advocate_preview_image"
+                  src={advocate.profile_pic}
+                />
+              </Link>
+              <div>
+                <strong>{advocate.name}</strong>
+                <br />
+                <a href={advocate.twitter}>@{advocate.username}</a>
+              </div>
+            </div>
+
+            <small className="bio_preview">{advocate.bio}</small>
           </div>
         ))}
       </div>
