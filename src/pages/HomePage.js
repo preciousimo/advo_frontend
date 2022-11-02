@@ -22,7 +22,9 @@ const HomePage = () => {
       <div>
         {advocates.map((advocate, index) => (
           <div key={index}>
-            <strong>{advocate.username}</strong>
+            <img  src={advocate.profile_pic}/>
+            <strong>{advocate.name}</strong>
+            <a href={advocate.twitter}>@{advocate.username}</a>
             <Link to={`/advocate/${advocate.username}`}>View</Link>
           </div>
         ))}
