@@ -4,6 +4,7 @@ import axios from "axios";
 
 const HomePage = () => {
   const [advocates, setAdvocates] = useState([]);
+  const [total, setTotal] = useState(0)
 
   useEffect(() => {
     getData();
@@ -13,12 +14,13 @@ const HomePage = () => {
     let response = await axios.get("https://cados.up.railway.app/advocates/");
     console.log("Response:", response);
     setAdvocates(response.data.advocates);
+    setTotal(response.data.total)
   };
 
   return (
     <div className="main_container">
       <h2>
-        Search (TOTAL SEARCH) developer advocates found by @dennisivy's
+        Search {total} developer advocates found by @dennisivy's
         webscraper and the TwitterAPI.
       </h2>
 
