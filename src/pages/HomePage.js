@@ -8,16 +8,21 @@ const HomePage = () => {
   const [pagination, setPagination] = useState(null)
 
   useEffect(() => {
-    getData();
+    getData(); 
   }, []);
 
-  let getData = async () => {
-    let response = await axios.get("https://cados.up.railway.app/advocates/");
+  let getData = async (query = '') => {
+    let response = await axios.get(`https://cados.up.railway.app/advocates?=${query}`);
     console.log("Response:", response);
     setAdvocates(response.data.advocates);
     setTotal(response.data.total)
     setPagination(response.data.pagination)
   };
+
+  let searchData = (e) => {
+    let query = e.target.query.value
+    getData(query)
+  }
 
   return (
     <div className="main_container">
@@ -25,6 +30,13 @@ const HomePage = () => {
         Search {total} developer advocates found by @dennisivy's
         webscraper and the TwitterAPI.
       </h2>
+
+      <div>
+        <form onSubmit={searchData} id="search_form">
+          <input  type="text" name="query" placeholder="Search advocates..." />
+          <input  type="submit" value="search"/>
+        </form>
+      </div>
 
       <div className="advocate_list">
         {advocates.map((advocate, index) => (
