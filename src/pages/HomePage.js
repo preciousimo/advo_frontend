@@ -5,6 +5,7 @@ import axios from "axios";
 const HomePage = () => {
   const [advocates, setAdvocates] = useState([]);
   const [total, setTotal] = useState(0)
+  const [pagination, setPagination] = useState(null)
 
   useEffect(() => {
     getData();
@@ -15,6 +16,7 @@ const HomePage = () => {
     console.log("Response:", response);
     setAdvocates(response.data.advocates);
     setTotal(response.data.total)
+    setPagination(response.data.pagination)
   };
 
   return (
