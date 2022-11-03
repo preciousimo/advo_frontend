@@ -20,6 +20,7 @@ const HomePage = () => {
   };
 
   let searchData = (e) => {
+    e.preventDefault()
     let query = e.target.query.value
     getData(query)
   }
