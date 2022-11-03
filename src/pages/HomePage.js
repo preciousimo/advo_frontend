@@ -12,12 +12,16 @@ const HomePage = () => {
   }, []);
 
   let getData = async (query = "") => {
+    // let response = await axios.get(
+    //   `https://cados.up.railway.app/advocates?query=${query}`
+    // );
     let response = await axios.get(
-      `https://cados.up.railway.app/advocates?query=${query}`
+      `http://127.0.0.1:8000/advocates?query=${query}`
     );
-    setAdvocates(response.data.advocates);
-    setTotal(response.data.total);
-    setPagination(response.data.pagination);
+    // setAdvocates(response.data.advocates);
+    // setTotal(response.data.total);
+    // setPagination(response.data.pagination);
+    setAdvocates(response.data);
   };
 
   let searchData = (e) => {
