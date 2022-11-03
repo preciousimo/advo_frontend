@@ -12,6 +12,24 @@ a{
   margin: 0 auto;
 }
 
+input{
+  padding: 1em;
+  font-size: 16px;
+  background-color: #2b3031;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+
+}
+
+.btn-primary{
+  background-color: aqua;
+}
+
+.form_wrapper{
+  margin: 2em 0;
+}
+
 .advocate_list{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;

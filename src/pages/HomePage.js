@@ -31,10 +31,10 @@ const HomePage = () => {
         webscraper and the TwitterAPI.
       </h2>
 
-      <div>
+      <div className="form_wrapper">
         <form onSubmit={searchData} id="search_form">
           <input  type="text" name="query" placeholder="Search advocates..." />
-          <input  type="submit" value="search"/>
+          <input className="btn-primary"  type="submit" value="search"/>
         </form>
       </div>
 
