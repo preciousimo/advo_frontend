@@ -12,7 +12,7 @@ const HomePage = () => {
   }, []);
 
   let getData = async (query = '') => {
-    let response = await axios.get(`https://cados.up.railway.app/advocates?=${query}`);
+    let response = await axios.get(`https://cados.up.railway.app/advocates?query=${query}`);
     console.log("Response:", response);
     setAdvocates(response.data.advocates);
     setTotal(response.data.total)
